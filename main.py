@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 
 
-def test_link(token, link):
+def is_bitlink(token, link):
   headers = {"authorization": token}
   url_test = f'https://api-ssl.bitly.com/v4/bitlinks/{link}'
   response = requests.get(url_test, headers=headers)
@@ -39,7 +39,7 @@ def main():
 
   try:
     link = args.link
-    if test_link(token, link):
+    if is_bitlink(token, link):
       count = count_clicks(token, link)
       print(f"Количество кликов {count}")
     else:
