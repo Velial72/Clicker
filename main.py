@@ -24,9 +24,9 @@ def shorten_link(token, link):
 def count_clicks(token, link):
   headers = {"authorization": token}
   count_url = f'https://api-ssl.bitly.com/v4/bitlinks/{link}/clicks/summary'
-  respons = requests.get(count_url, headers=headers)
-  respons.raise_for_status()
-  count = respons.json()["total_clicks"]
+  response = requests.get(count_url, headers=headers)
+  response.raise_for_status()
+  count = response.json()["total_clicks"]
   return count
 
 def main():
