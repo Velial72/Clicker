@@ -16,3 +16,7 @@ pip install -r requiriments.txt
 ### Цель проекта
 
 Проект написан в образовательных целях на онлайн-курсе для веб-разработчиков [dvmn.org](https://dvmn.org/).
+
+### Пример выполнения программы
+
+<img width="583" alt="Снимок экрана 2023-03-17 в 21 58 25" src="https://user-images.githubusercontent.com/126498671/225970268-df912dcc-00d6-4ae3-9ad8-cedff2bb907e.png">
