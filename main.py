@@ -2,7 +2,7 @@ import argparse
 import requests
 import os
 from dotenv import load_dotenv
-load_dotenv()
+
 
 def test_link(token, link):
   headers = {"authorization": token}
@@ -31,6 +31,7 @@ def count_clicks(token, link):
   return count
 
 def main():
+  load_dotenv()
   token = os.getenv('BT_TOKEN')
   parser = argparse.ArgumentParser(description='Программа позволяет сокращать ссылки и считать переходы по ним')
   parser.add_argument('link', help='Введи ссылку')
