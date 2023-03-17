@@ -43,7 +43,7 @@ def main():
       print(f"Количество кликов {count}")
     else:
       print(shorten_link(token, link))
-  except:
+  except requests.exceptions.HTTPError:
       print("какая-то ошибка")
 
 if __name__ == '__main__':
