@@ -11,7 +11,7 @@ def is_bitlink(token, link):
   return response.ok
 
 
-def shorten_links(token, link):
+def shorten_link(token, link):
   bitlink_url = 'https://api-ssl.bitly.com/v4/shorten'
   body = {"long_url":  link}
   headers = {"authorization": token}
@@ -42,7 +42,7 @@ def main():
       count = count_clicks(token, link)
       print(f"Количество кликов {count}")
     else:
-      print(shorten_links(token, link))
+      print(shorten_link(token, link))
   except:
       print("какая-то ошибка")
 
