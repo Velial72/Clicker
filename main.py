@@ -6,17 +6,17 @@ from dotenv import load_dotenv
 
 def is_bitlink(token, link):
   headers = {"authorization": token}
-  url_test = f'https://api-ssl.bitly.com/v4/bitlinks/{link}'
-  response = requests.get(url_test, headers=headers)
+  check_url = f'https://api-ssl.bitly.com/v4/bitlinks/{link}'
+  response = requests.get(check_url, headers=headers)
   result = response.ok
   return result
 
 
 def shorten_links(token, link):
-  url = 'https://api-ssl.bitly.com/v4/shorten'
+  bitlink_url = 'https://api-ssl.bitly.com/v4/shorten'
   body = {"long_url":  link}
   headers = {"authorization": token}
-  response = requests.post(url, headers=headers, json=body)
+  response = requests.post(bitlink_url, headers=headers, json=body)
   response.raise_for_status()
   bitlink = response.json()['link']
   return bitlink
@@ -24,8 +24,8 @@ def shorten_links(token, link):
 
 def count_clicks(token, link):
   headers = {"authorization": token}
-  url_2 = f'https://api-ssl.bitly.com/v4/bitlinks/{link}/clicks/summary'
-  respons = requests.get(url_2, headers=headers)
+  count_url = f'https://api-ssl.bitly.com/v4/bitlinks/{link}/clicks/summary'
+  respons = requests.get(count_url, headers=headers)
   respons.raise_for_status()
   count = respons.json()["total_clicks"]
   return count
