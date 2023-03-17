@@ -6,9 +6,10 @@
 
 Python3 должен быть установлен.
 Затем используйте 'pip' (или 'pip3'если есть конфликт с Python2) для установки зависимостей:
-'''
+
+```
 pip install -r requiriments.txt
-'''
+```
 
 Рекомендуется использовать [virtualenv/venv](https://docs.python.org/3/library/venv.html) для изоляции проекта.
 
