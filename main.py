@@ -31,7 +31,7 @@ def count_clicks(token, link):
 
 def main():
   load_dotenv()
-  token = os.getenv('BT_TOKEN')
+  token = os.getenv('BITLY_TOKEN')
   parser = argparse.ArgumentParser(description='Программа позволяет сокращать ссылки и считать переходы по ним')
   parser.add_argument('link', help='Введи ссылку')
   args = parser.parse_args()
