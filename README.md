@@ -20,3 +20,7 @@ pip install -r requiriments.txt
 ### Пример выполнения программы
 
 <img width="583" alt="Снимок экрана 2023-03-17 в 21 58 25" src="https://user-images.githubusercontent.com/126498671/225970268-df912dcc-00d6-4ae3-9ad8-cedff2bb907e.png">
+
+### Настройка окружения
+
+Перед запуском необходимо создать файл ```.env``` и внести в него переменную 'BITLY_TOKEN' с вашим кодом авторизации на сайте [bitly.com](https://app.bitly.com/) 
