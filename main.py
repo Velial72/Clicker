@@ -44,8 +44,8 @@ def main():
             print(f"Количество кликов {count}")
         else:
             print(shorten_link(token, link))
-    except requests.exceptions.HTTPError:
-        print("какая-то ошибка")
+    except requests.HTTPError:
+        print("Введен некорректный адрес")
 
 
 if __name__ == '__main__':
